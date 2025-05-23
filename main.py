@@ -19,6 +19,7 @@ app.add_middleware(
     allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # Tortoise ORM 모델 정의
@@ -64,6 +65,7 @@ async def create_post(post: PostCreate):
     obj = await Post.create(
         title=post.title, content=post.content, username=post.username
     )
+
     return PostOut(
         id=obj.id,
         title=obj.title,
