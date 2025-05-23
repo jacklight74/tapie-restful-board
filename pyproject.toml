@@ -1,0 +1,16 @@
+[project]
+name = "tapie-restful-board"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115.12",
+    "pydantic>=2.11.5",
+    "tortoise-orm>=0.25.0",
+    "uvicorn>=0.34.2",
+]
+
+[dependency-groups]
+dev = [
+    "black>=25.1.0",
+]
